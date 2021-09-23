@@ -18,14 +18,14 @@
         
         <section id="balance">
 
-            <div class="card">
+            <div class="card entries">
                 <h3>Entradas
                     <img src="/images/Entradas.svg">
                 </h3>
                 <p><span>R$</span> 2.000,00</p>
             </div>
             
-            <div class="card">
+            <div class="card outputs">
                 <h3>Saídas
                     <img src="/images/Saídas.svg">
                 </h3>
@@ -42,6 +42,7 @@
         
         <section id="transaction">
             <h2>Transações</h2>
+            <button class="btn-add-transaction">+ Nova transação</button>
 
             <table id="data-table">
                 <thead>
@@ -54,21 +55,36 @@
 
                 <tbody>
                     <tr>
-                        <td>Luz</td>
-                        <td>- R$ 500,00</td>
-                        <td>23/01/2021</td>
+                        <td class="description">Luz</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td>
+                            <button class="btn-delete">
+                                <img src="/images/delete.svg" alt="Botão de deletar uma transação">
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
-                        <td>Website</td>
-                        <td>R$ 5.000,00</td>
-                        <td>23/01/2021</td>
+                        <td class="description">Website</td>
+                        <td class="income">R$ 5.000,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td>
+                            <button class="btn-delete">
+                                <img src="/images/delete.svg" alt="Botão de deletar uma transação">
+                            </button>
+                        </td>
                     </tr>
 
                     <tr>
-                        <td>Aluguel</td>
-                        <td>- R$ 500,00</td>
-                        <td>23/01/2021</td>
+                        <td class="description">Aluguel</td>
+                        <td class="expense">- R$ 500,00</td>
+                        <td class="date">23/01/2021</td>
+                        <td>
+                            <button class="btn-delete">
+                                <img src="/images/delete.svg" alt="Botão de deletar uma transação">
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

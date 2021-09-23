@@ -51,12 +51,13 @@ main {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: -70px;
+    margin-top: -80px;
 }
 
 .card {
     width: 300px;
     padding: 30px 10px;
+    margin: 2%;
     background-color: var(--shape-color);
     border-radius: 10px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
@@ -79,7 +80,100 @@ main {
     font-weight: 300;
 }
 
+.card.outputs h3 {
+    color: var(--text-color);
+}
+
 .card.total {
     background-color: var(--blue-secondary-color);
+}
+
+.card.total h3 {
     color: #fff;
 }
+
+.card.total p {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    #balance {
+        justify-content: center;
+    }
+}
+
+#transaction {
+    margin: 2%;
+}
+
+.btn-add-transaction {
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 8px 16px;
+    color: var(--title-color);
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: ease .2s;
+}
+
+.btn-add-transaction:hover {
+    transform: scale(0.9, 0.9);
+}
+
+#data-table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0 .5rem;
+}
+
+#data-table th {
+    padding: 10px;
+    text-align: left;
+    font-weight: 400;
+    color: var(--text-color);
+    border-radius: 5px 0 0 5px;
+}
+
+#data-table td {
+    background-color: var(--shape-color);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    font-weight: 400;
+    border-radius: 5px 0 0 5px;
+}
+
+#data-table td:hover {
+    opacity: 0.8;
+}
+
+.btn-delete {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    
+}
+
+.btn-delete img {
+    width: 16px;
+}
+
+td.description {
+    color: var(--title-color);
+}
+
+td.expense {
+    color: var(--red-color);
+}
+
+td.income {
+    color: var(--green-color);
+}
+
+td.date {
+    color: var(--text-color);
+}
+
