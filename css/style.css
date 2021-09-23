@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue-primary-color: #2C4CF2;
+    --blue-secondary-color: #1F49E0;
+    --green-color: #49AA26;
+    --red-color: #E92929;
+    --title-color: #363F5F;
+    --text-color: #969CB2;
+    --background-color: #F0F2F5;
+    --shape-color: #fff;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    color: var(--title-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: var(--blue-primary-color);
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn-add-transaction {
+    font-weight: 700;
+    padding: 16px 20px;
+    color: #fff;
+    background-color: var(--blue-secondary-color);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: ease .2s;
+}
+
+.btn-add-transaction:hover {
+    transform: scale(0.9, 0.9);
+}
+
+#balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -80px;
+}
+
+.card {
+    width: 300px;
+    padding: 30px 10px;
+    background-color: var(--shape-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.card p {
+    font-weight: 400;
+    font-size: 36px;
+    color: var(--title-color);
+}
+
+.card p span {
+    font-weight: 300;
+}
+
+.card.outputs h3 {
+    color: var(--text-color);
+}
+
+.card.total {
+    background-color: var(--blue-secondary-color);
+}
+
+.card.total h3 {
+    color: #fff;
+}
+
+.card.total p {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    #balance {
+        justify-content: center;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+}
+
+#transaction {
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+#data-table {
+    width: 100%;
+    margin-top: 20px;
+    border-spacing: 0 .5rem;
+}
+
+#data-table th {
+    padding: 10px;
+    text-align: left;
+    font-weight: 400;
+    color: var(--text-color);
+    border-radius: 5px 0 0 5px;
+}
+
+#data-table td {
+    background-color: var(--shape-color);
+    padding: 20px 10px;
+    font-weight: 400;
+    border-radius: 5px 0 0 5px;
+}
+
+#data-table td:hover {
+    opacity: 0.8;
+}
+
+.btn-delete {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.btn-delete img {
+    width: 16px;
+}
+
+td.description {
+    color: var(--title-color);
+}
+
+td.expense {
+    color: var(--red-color);
+}
+
+td.income {
+    color: var(--green-color);
+}
+
+td.date {
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    padding: 0 2%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .2s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    display: none;
+    z-index: 300;
+    background-color: var(--shape-color);
+    width: 600px;
+    padding: 30px;
+    transition: .2s ease;
+    animation: showModal .3s forwards;
+}
+
+@keyframes showModal {
+    from {
+        transform: translate3d(0, -500px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-box.active {
+    display: block;
+    opacity: 1;
+}
+
+.modal-box h3 {
+    padding-bottom: 10px;
+}
+
+.modal-box input {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: var(--title-color);
+    border: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.modal-box label {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.modal-box input[type="date"] {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 16px 36px;
+    background-color: transparent;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .2s ease;
+}
+
+.btn:hover {
+    transform: scale(0.9, 0.9);
+}
+
+.btn.add {
+    background-color: var(--green-color);
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+}
+
+.btn.cancel {
+    border: 1px solid var(--red-color);
+    color: var(--red-color);
+}
+

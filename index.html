@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>my.finance$</title>
 </head>
 <body>
     <header>
-        <h1 class="logo">
+        <h1 class="logo container">
             <img src="/images/logo.svg" alt="Logo my.finances - está escrito my.finances com o cifrão de dinheiro">
+            <button class="btn-add-transaction">+ Nova transação</button>
         </h1>
     </header>
 
-    <main>
+    <main class="container">
         
         <section id="balance">
 
@@ -42,7 +43,6 @@
         
         <section id="transaction">
             <h2>Transações</h2>
-            <button class="btn-add-transaction">+ Nova transação</button>
 
             <table id="data-table">
                 <thead>
@@ -57,37 +57,51 @@
                     <tr>
                         <td class="description">Luz</td>
                         <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
-                            <button class="btn-delete">
-                                <img src="/images/delete.svg" alt="Botão de deletar uma transação">
-                            </button>
+                        <td class="date">23/01/2021
+                         <button class="btn-delete">
+                            <img src="/images/delete.svg" alt="Botão de deletar uma transação">
+                         </button>   
                         </td>
                     </tr>
 
                     <tr>
                         <td class="description">Website</td>
                         <td class="income">R$ 5.000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
+                        <td class="date">23/01/2021 
                             <button class="btn-delete">
                                 <img src="/images/delete.svg" alt="Botão de deletar uma transação">
-                            </button>
+                             </button>
                         </td>
                     </tr>
 
                     <tr>
                         <td class="description">Aluguel</td>
                         <td class="expense">- R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <td>
+                        <td class="date">23/01/2021
                             <button class="btn-delete">
                                 <img src="/images/delete.svg" alt="Botão de deletar uma transação">
-                            </button>
+                             </button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <section class="modal">
+            <div class="modal-box">
+                <form action="/">
+                    <h3>Nova Transação</h3>
+                    <input type="text" name="description" id="modal-description" placeholder="Descrição">
+                    <input type="number" name="value" id="modal-value" step="0.01" placeholder="0,00">
+                    <label for="modal-value">Use o sinal - (negativo) para despesas e, (vírgula) para casas decimais.</label>
+                    <input type="date" name="date" id="modal-date">
+                    
+                    <div class="buttons">
+                        <button class="btn cancel">Cancelar</button>
+                        <button class="btn add">Adicionar</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
