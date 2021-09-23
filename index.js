@@ -1,17 +1,33 @@
 const btnAddTransaction = document.querySelector('.btn-add-transaction');
 const btnDeleteTransaction = document.querySelector('.btn-delete');
-const btnAddModal = document.querySelector('.btn add');
-const btnCancel = document.querySelector('.btn cancel');
+const btnAddModal = document.querySelector('.btn-add');
+const btnCancel = document.querySelector('.btn-cancel');
+const btnCloseModal = document.querySelector('.close-modal')
 const modal = document.querySelector('.modal');
-const modalBox = document.querySelector('.modal-box');
 
+function handleCloseModal(event){
+    if (event.target === this) {
+        toggleModal(event);
+    }
+}
 
-btnAddTransaction.addEventListener('click', () => {
-    modal.classList.add('active');
-    modalBox.classList.add('active');
-});
+const removeTransaction = (event) => {
+    event.preventDefault();
+    document.querySelectorAll('tr').removeAttribute();
+}
 
-btnCancel.addEventListener('click', () => {
-    modal.classList.remove('active');
-    modalBox.classList.remove('active');
-});
+const toggleModal = (event) => {
+    event.preventDefault();
+    modal.classList.toggle('active');
+}
+
+const addTransaction = (event) => {
+    event.preventDefault();
+}
+
+btnAddTransaction.addEventListener('click', toggleModal);
+btnCancel.addEventListener('click', toggleModal);
+btnCloseModal.addEventListener('click', toggleModal);
+modal.addEventListener('click', handleCloseModal);
+btnDeleteTransaction.addEventListener('click', removeTransaction);
+

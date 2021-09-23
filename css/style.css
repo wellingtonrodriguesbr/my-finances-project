@@ -56,7 +56,7 @@ header {
     background-color: var(--blue-secondary-color);
     border: none;
     border-radius: 10px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: ease .2s;
 }
@@ -206,7 +206,6 @@ td.date {
 }
 
 .modal-box {
-    display: none;
     z-index: 300;
     background-color: var(--shape-color);
     width: 600px;
@@ -255,6 +254,19 @@ td.date {
     cursor: pointer;
 }
 
+.title-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-modal{
+    width: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -276,14 +288,13 @@ td.date {
     transform: scale(0.9, 0.9);
 }
 
-.btn.add {
-    background-color: var(--green-color);
-    color: #fff;
-    border: none;
+.btn-add {
+    color: var(--green-color);
+    border: solid 1px var(--green-color);
     margin-left: 10px;
 }
 
-.btn.cancel {
+.btn-cancel {
     border: 1px solid var(--red-color);
     color: var(--red-color);
 }
