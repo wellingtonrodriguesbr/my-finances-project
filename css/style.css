@@ -208,6 +208,7 @@ td.date {
 .modal-box {
     z-index: 300;
     background-color: var(--shape-color);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
     width: 600px;
     padding: 30px;
     transition: .2s ease;
