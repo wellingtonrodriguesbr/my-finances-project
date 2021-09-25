@@ -11,7 +11,7 @@
     <header>
         <h1 class="logo container">
             <img src="/images/logo.svg" alt="Logo my.finances - está escrito my.finances com o cifrão de dinheiro">
-            <button type="button" class="btn-add-transaction">+ Nova transação</button>
+            <button type="button" onclick="Modal.open()" class="btn-add-transaction">+ Nova transação</button>
         </h1>
     </header>
 
@@ -23,21 +23,21 @@
                 <h3>Entradas
                     <img src="/images/Entradas.svg">
                 </h3>
-                <p id="incomeDisplay"><span>R$</span></p>
+                <p id="incomeDisplay"><span>R$0,00</span></p>
             </div>
             
             <div class="card outputs">
                 <h3>Saídas
                     <img src="/images/Saídas.svg">
                 </h3>
-                <p id="expenseDisplay"><span>R$</span></p>
+                <p id="expenseDisplay"><span>R$0,00</span></p>
             </div>
 
             <div class="card total">
                 <h3>Total
                     <img src="/images/Total.svg">
                 </h3>
-                <p id="totalDisplay"><span>R$</span></p>
+                <p id="totalDisplay"><span>R$0,00</span></p>
             </div>       
         </section>
         
@@ -59,28 +59,29 @@
 
         <section class="modal">
             <div class="modal-box">
-                <form action="/">
+                <form action="" onsubmit="Form.submit(event)" id="form-modal">
                     <div class="title-modal">
                         <h3>Nova Transação</h3>
-                        <button type="button"  class="close-modal">
+                        <button type="button" onclick="Modal.close()"   class="close-modal">
                             <img src="/images/fechar.svg" alt="Botão de fechar o modal">
                         </button>
                     </div>
                     
-                    <input type="text" title="Digite a descrição de sua transação" name="description" id="modal-description" placeholder="Descrição">
-                    <input type="number" title="Digite o valor da sua transação" name="value" id="modal-value" step="0.01" placeholder="0,00">
-                    <label for="modal-value">Use o sinal - (negativo) para despesas e, (vírgula) para casas decimais.</label>
-                    <input type="date" title="Selecione a data da transação" name="date" id="modal-date">
-                    
+                    <div><input type="text" name="description" id="description" placeholder="Descrição"></div>
+                    <div>
+                        <input type="number" name="amount" id="amount" step="0.01" placeholder="0,00">
+                        <label for="amount">Use o sinal - (negativo) para despesas e, (vírgula) para casas decimais.</label>
+                    </div>
+
+                    <div><input type="date" id="date"></div>
                     <div class="buttons">
-                        <button type="button"  class="btn btn-cancel">Cancelar</button>
-                        <button type="button"  class="btn btn-add">Adicionar</button>
+                        <button type="button" onclick="Modal.close()"  class="btn btn-cancel">Cancelar</button>
+                        <button class="btn btn-add">Adicionar</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
-
     <script src="/index.js"></script>
 </body>
 </html>
