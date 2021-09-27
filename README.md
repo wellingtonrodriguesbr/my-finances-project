@@ -23,4 +23,4 @@ O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pesso
 
 ---
 
-## Desenvolvido por [Welllington Rodrigues](https://www.instagram.com/tonrdrigues/) 🤙
+## Desenvolvido por [Welllington Rodrigues](https://www.linkedin.com/in/tonrodrigues/) 🤙
