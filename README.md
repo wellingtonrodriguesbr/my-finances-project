@@ -13,6 +13,7 @@
 # Sobre o projeto
 O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pessoais onde é possível cadastrar e excluir transações e as mesmas ficam salvas no localStorage do navegador. Desenvolvido com intuito de praticar o que foi estudado dentro do Discover da **Rocketseat**.
 
+<br/>
 ---
 
 # Tecnologias
@@ -23,4 +24,4 @@ O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pesso
 
 ---
 
-## Desenvolvido por [Welllington Rodrigues](https://www.linkedin.com/in/tonrodrigues/) 🤙
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/tonrodrigues/">Wellington Rodrigues</a> ✌🏼</p>
