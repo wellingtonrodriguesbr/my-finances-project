@@ -18,10 +18,10 @@ O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pesso
 
 # Tecnologias
 
-- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [JAVASCRIPT](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction)
+- [Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction)
 
 ---
 
-<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/tonrodrigues/">Wellington Rodrigues</a> ✌🏼</p>
+<p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/wellingtonrodriguesbr/">Wellington Rodrigues</a> ✌🏼</p>
