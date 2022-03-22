@@ -9,14 +9,9 @@
 
 <h3 align="center">Você pode acessar o projeto <a href="https://myfinanceswebapp.netlify.app/" target="_blank">clicando aqui</a></h3>
 
----
-
 
 # Sobre o projeto
 O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pessoais onde é possível cadastrar e excluir transações e as mesmas ficam salvas no localStorage do navegador. Desenvolvido com intuito de praticar o que foi estudado dentro do Discover da **Rocketseat**.
-
-<br/>
----
 
 # Tecnologias
 
@@ -24,6 +19,5 @@ O projeto **My.finance$** é um aplicativo para gerenciamento de finanças pesso
 - [Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction)
 
----
 
 <p align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/wellingtonrodriguesbr/">Wellington Rodrigues</a> ✌🏼</p>
